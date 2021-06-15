@@ -1,0 +1,21 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+Williams Wharf Rd. and Kings Rd.,Broomes Island Rd. and Oyster House,6,Mid-County,867.84,3,2
+Broomes Island Rd. and Oyster House,Ross Rd.,6,Mid-County,840.32,2.9,1
+Dowell Rd.,Giant Food,7,Lusby Shuttle,633.33,3.28,3
+Broomes Island Rd. and Oyster House,Broomes Island Rd. and Grays Rd.,6,Mid-County,288.75,4.49,1
+Broomes Island Rd. and Williams Wharf Rd.,Williams Wharf Rd. and Kings Rd.,6,Mid-County,267.88,0.92,1
+Saint Leonard Rd. and Calvert Beach Rd.,Courthouse,5,South Route,196.74,6.11,1
+Sixes Rd. and T Hance Turn Around,Sixes Rd. and Adelina Rd.,6,Mid-County,185.69,2.88,2
+Patuxent Plaza Shopping Center at Bus Stop,Solomons Info Center and Island,7,Lusby Shuttle,183.54,0.95,3
+Detention and Substance Abuse Center,Yardley Hills at Community Building,1,Prince Frederick Shuttle I,179.98,0.93,1
+Ross Rd. and Broomes Island Rd.,Broomes Island Rd. and Oyster House,6,Mid-County,170.19,2.64,1
+Dowell Rd.,Southern Pines Community Center,7,Lusby Shuttle,135,3.5,6
+Route 4 and Route 2,Route 2 and Mount Harmony Rd.,4,North Route,127.77,2.65,8
+Route 2 and Mount Harmony Rd.,Route 260 and Route 261,4,North Route,125.85,3.91,3
+Walmart,Detention and Substance Abuse Center,1,Prince Frederick Shuttle I,125.45,1.3,5
+Giant Food,Patuxent Plaza Shopping Center at Bus Stop,7,Lusby Shuttle,112.59,2.92,3
+Southern Pines Community Center,Giant Food,7,Lusby Shuttle,6.55,0.27,6
+Mill Bridge Rd.,Coster Rd. and Bafford Rd.,5,South Route,6.36,0.33,1
+Southern Pines Senior Apartments,Southern Pines Community Center,7,Lusby Shuttle,5.74,0.3,3
+Giant Food,Southern Pines Community Center,7,Lusby Shuttle,5.24,0.27,9
+Yardley Hills at Community Building,North Prince Frederick Blvd and Hallowing Point Rd,8,Charlotte Hall,4.69,0.58,1

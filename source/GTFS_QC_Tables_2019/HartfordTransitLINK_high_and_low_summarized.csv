@@ -1,0 +1,23 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+Aberdeen Train Station,McDonald's (across from Walmart on US 40),4,Yellow,132.48,1.14,1
+Harford Community College - Fallston Hall Westbound,Greenbrier Shopping Plaza/Safeway Westbound,1,Green,122.51,2.54,1
+William Paca Industrial Park - Eastbound,Cokesbury Rd at Rte. 7-McComus Funeral Home-Eastbound,6,Purple,121.08,1.25,1
+Home Depot - Edgewood - Eastbound,Long Bar Harbor Road at US 40 - Eastbound,6A,Light Purple,112.45,2.33,7
+Winters Run Industrial Park,Rte. 40 & Paul Martin Dr - Walgreens,2,Blue,6.85,0.71,1
+Target - Beards Hill,Aberdeen High School,4,Yellow,6.78,0.42,1
+Woodsdale Apartments,Walmart - Abingdon,2,Blue,6.47,0.47,3
+Woodsdale Apartments,Walmart - Abingdon,2A,Light Blue,6.47,0.47,3
+Aberdeen Shopping Plaza/Ollie's,Wage Connection/Klein's Beards Hill Shopping Ctr,4,Yellow,6.46,0.54,3
+Saks & Frito Lay,Walmart - Aberdeen - Eastbound,6A,Light Purple,6.4,0.46,1
+Kohl's Distribution Center - Northbound,Rte. 40 & Paul Martin Dr - Walgreens,5,Red,6.39,1.32,1
+Fire Station No. 2 - Southbound,Harford Memorial Hospital,7,Teal,6.15,0.38,1
+Walmart - Abingdon,WaWa Food Market - Abingdon,2A,Light Blue,5.83,0.42,1
+Food Lion - Perryville,White Horse Apartments - Perryville,7,Teal,5.45,0.34,1
+Aberdeen Senior Activity Center - Westbound,Affinity Post Apts - Eastbound,4,Yellow,5.38,0.56,1
+Hanson Road at Fern Street,Edgewood Shopping Plaza - Southbound,5,Red,5.24,0.27,1
+Revolution at Seneca Ave.,Harford Memorial Hospital,7,Teal,5.09,0.69,1
+Lakeside Business Park,Rte. 40 & Paul Martin Dr - Walgreens,2,Blue,4.8,0.84,2
+Lakeside Business Park,Rte. 40 & Paul Martin Dr - Walgreens,2A,Light Blue,4.8,0.84,1
+Harford Mall (Sears),Harford Senior Housing,3,Orange,4.45,0.32,5
+Winters Run Industrial Park,Rte. 40 & Paul Martin Dr - Walgreens,5,Red,4.28,0.71,1
+Lorien at Bel Air,Festival at Bel Air - Shoprite,2A,Light Blue,3.5,0.51,1

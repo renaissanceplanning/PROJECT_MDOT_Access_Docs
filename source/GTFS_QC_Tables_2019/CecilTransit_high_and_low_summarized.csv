@@ -1,0 +1,18 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+RT 40 at Belvidere Rd. (EB),RT 40 - Charlestown Crossing,24047,Perryville Connection,230.19,2.38,7
+RT 40 - After Montgomery Dr.,RT 40 - Activity Center Ln.,24047,Perryville Connection,165.09,1.71,7
+RT 40 - Across from Stony Run,RT 40 - Ritchie Bros.,24047,Perryville Connection,148.76,1.54,8
+RT 40 - Charlestown Crossing,RT 40 - Stony Run Apts.,24047,Perryville Connection,147.54,1.53,5
+Super Wal-Mart,RT 40 - Kohls,24046,Glasgow Connection,140.61,1.46,4
+RT 40 - Ritchie Bros.,RT 40 - Belvidere Rd. (WB),24047,Perryville Connection,114.49,2.37,8
+RT 40 - Before Old Elk Neck Rd.,Landing Ln. & W. Main St.,24047,Perryville Connection,112.43,1.16,7
+200 Chesapeake Blvd,RT 40 - Kohls,24046,Glasgow Connection,111.76,1.16,1
+RT 40 - John Deere,Safeway - Food Court Entrance,24046,Glasgow Connection,6.55,0.37,1
+4th St. and Ave. 'D',Perry Pt. Bldg. 361,24047,Perryville Connection,6.25,0.52,1
+200 Chesapeake Blvd,Acme - Big Elk Mall,24048,Mid -County Connection,6.04,2.19,2
+Bridge St. Plaza - American Cash Traders,150 E. Main St.,24046,Glasgow Connection,5.06,0.31,1
+RT 40 - Happy Harry's,RT 40 - La Grange,24046,Glasgow Connection,4.98,0.26,1
+Davita Dialysis (Call in stop),Acme - Big Elk Mall,24047,Perryville Connection,4.62,0.33,3
+NE Walmart,NE - Walgreens / Food Lion,24048,Mid -County Connection,3.96,0.29,4
+W. Main St. and Maffit St.,Acme - Big Elk Mall,24047,Perryville Connection,3.81,0.59,1
+W. Main St. and Maffit St.,Davita Dialysis (Call in stop),24047,Perryville Connection,3.55,0.26,3

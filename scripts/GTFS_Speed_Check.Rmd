@@ -1,0 +1,206 @@
+---
+title: "Calculate GTFS Stop-to-Stop Speed"
+author: "Joel Lehman and Alex Bell"
+date: "6/11/2019"
+output:
+  html_document:
+    df_print: paged
+---
+
+This script ingests a GTFS feed, calculates stop-to-stop scheduled trip legs, identifies the speed between these stop pairs based on the linerar distance between points, and exports both maps and tables of links with both high and low speeds. As this tool is calculating linear distance between stops, the speed identified can be considered to be a minimum speed. The purpose of this tool is to assist in validation of a GTFS feed and to further assist in debugging feeds.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require(tidytransit)) {install.packages("tidytransit")}
+if (!require(sf)) {install.packages("sf")}
+if (!require(mapview)) {install.packages("mapview")}
+if (!require(webshot)) {install.packages("webshot")}
+
+library(tidytransit)
+library(sf)
+library(mapview)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(webshot)
+
+```
+
+
+```{r input variables and load gtfs}
+
+#read in GTFS feed from local file
+
+local_gtfs_path <- "E:\\MDOT_MMA\\Chapter30_Scoring\\Ch30_2019\\Tools\\R_GTFS\\Data\\_v_Allegany_Transit.zip"
+local_gtfs_name <- "allegany_transit"
+
+tt_feed = tidytransit::read_gtfs(local_gtfs_path, local=TRUE,
+                                 geometry=TRUE, frequency=TRUE)
+
+```
+
+
+
+```{r quick look at gtfs feed}
+
+summary(tt_feed)
+
+
+```
+
+
+
+```{r plotting GTFS route frequency}
+plot(tt_feed)
+
+
+
+```
+
+
+```{r plot stop frequency}
+
+tt_feed_stops_freq_sf <- tt_feed$.$stops_sf %>%
+  left_join(tt_feed$.$stops_frequency, by="stop_id") %>%
+  select(headway)
+
+plot(tt_feed_stops_freq_sf)
+
+```
+
+Identify minimum stop to stop transit vehile speed
+
+```{r stop times to HMS}
+tt_feed <- tt_feed %>% 
+  set_hms_times()
+#head(tt_feed$stop_times)
+```
+
+
+```{r create stops sf}
+
+stops_sf <- tt_feed$.["stops_sf"]
+stop_times <- tt_feed$stop_times
+```
+
+```{r transform stops_sf to md state plane}
+stops_sf <- tt_feed$.$stops_sf
+#st_crs(stops_sf)
+stops_sf_prj <- st_transform(stops_sf, 26985)
+#st_crs(stops_sf_prj)
+
+```
+
+
+
+```{r identify stop-to-stop legs and calculate distance between stops}
+
+#Order stop times table by trip ID and sequence, add index column, and add stop a and b identifiers
+
+stop_times_ordered <- stop_times[order(stop_times$trip_id, stop_times$stop_sequence),] %>% 
+  mutate(a = row_number()) %>% 
+  mutate(b = a - 1) %>% 
+  select(trip_id, stop_id, arrival_time_hms, departure_time_hms, a, b)
+stop_to_stop_times <- stop_times_ordered %>% 
+  inner_join(stop_times_ordered, by = c("trip_id" = "trip_id", "a" = "b")) %>% 
+  rename(from_stop = stop_id.x, to_stop = stop_id.y, departure_time_hms = departure_time_hms.x, arrival_time_hms = arrival_time_hms.y) %>% 
+  select(-arrival_time_hms.x, -departure_time_hms.y, -a, -b, -a.y)
+
+stop_to_stop_geo <- inner_join(stop_to_stop_times, select(stops_sf_prj, stop_id, geometry),
+                            by=c("from_stop" = "stop_id")) %>% 
+  rename(from_geom = geometry) %>%    
+  inner_join(select(stops_sf_prj, stop_id, geometry),
+                            by=c("to_stop" = "stop_id")) %>% 
+  rename(to_geom = geometry)
+
+stop_to_stop_geo$distance <- st_distance(stop_to_stop_geo$from_geom, stop_to_stop_geo$to_geom, by_element = TRUE, which = "Euclidean", par = 0, tolerance = 0)
+
+```
+
+
+```{r calculate time duration between stops}
+stop_to_stop_geo$duration <- difftime(as.POSIXct(stop_to_stop_geo$arrival_time_hms, format = "%H:%M:%S"), as.POSIXct(stop_to_stop_geo$departure_time_hms, format = "%H:%M:%S"), units = "min")
+
+stop_to_stop_geo$kmph <- round((as.numeric(stop_to_stop_geo$distance) / 1000) / (as.numeric(stop_to_stop_geo$duration) / 60),digits=2)
+
+```
+
+```{r create lines between station pairs and add attributes back to lines to plot}
+stop_to_stop_geo <- stop_to_stop_geo %>% 
+  mutate(legid = row_number())
+trip_legs <- gather(stop_to_stop_geo, "point", "geom", from_geom, to_geom) 
+lines <- trip_legs %>% 
+  #filter(kmph < 7 | kmph > 110) 
+#%>%  filter(as.double(distance) > 402.336) %>% 
+  select(legid, geom, kmph, trip_id, from_stop, to_stop, distance) %>% 
+  st_as_sf(sf_column_name = "geom") %>% 
+  group_by(legid) %>% 
+  summarise(kmph = mean(kmph), trip_id = first(trip_id), from_stop = first(from_stop), to_stop = first(to_stop), distance = mean(distance)) %>%   
+  st_cast("LINESTRING")
+
+```
+
+
+```{r add feed attributes to lines}
+
+lines_with_attributes <- left_join(lines, select(tt_feed$stops, stop_id, stop_name), by=c("from_stop" = "stop_id")) %>% 
+  rename("from_stop_name" = "stop_name") %>% 
+  left_join(select(tt_feed$stops, stop_id, stop_name), by=c("to_stop" = "stop_id")) %>% 
+  rename("to_stop_name" = "stop_name") %>% 
+  left_join(select(tt_feed$trips, trip_id, route_id, trip_headsign), by=c("trip_id" = "trip_id")) %>%
+  left_join(select(tt_feed$routes, route_id, route_short_name, route_long_name), by=c("route_id" = "route_id"))
+  
+  #trip_short_name), removed as not in Fairfax feed
+```
+
+
+```{r plot results in maps and export maps and csv tables}
+
+lines_with_attributes$distance_in_miles <- round(unclass(lines_with_attributes$distance) / 1609.344, 2)
+
+legs_over_110 <- lines_with_attributes[order(-lines_with_attributes$kmph),] %>%
+  filter(is.finite(kmph), kmph > 110)
+
+legs_under_7 <- lines_with_attributes[order(lines_with_attributes$kmph),] %>% 
+  filter(is.finite(kmph), kmph < 7)
+
+high_and_low_legs <- rbind(legs_over_110, legs_under_7)
+
+#mapview(legs_over_110, zcol="kmph", lwd=5)
+
+#m1 <- mapview(legs_over_110, zcol="kmph", lwd=5)
+#m2 <- mapview(legs_under_7, zcol="kmph", lwd=5)
+#m3 <- mapview(legs_over_110, color = "darkred", lwd=5)
+#m4 <- mapview(legs_under_7, color = "cornflowerblue", lwd=5)
+#m5 <- m3 + m4
+mapview(high_and_low_legs, zcol="kmph", lwd=5)
+
+
+#filename_high <- paste0("gtfs_review_files/" ,local_gtfs_name, "_over_110kmph")
+#filename_low <- paste0("gtfs_review_files/" ,local_gtfs_name, "_under_7kmph")
+#filename_lines_with_attributes <- paste0("gtfs_review_files/" ,local_gtfs_name, "_lines_with_attributes_summarized")
+
+#write.csv(st_drop_geometry(legs_over_110), file = paste0(filename_high, ".csv"))
+#write.csv(st_drop_geometry(legs_under_7), file = paste0(filename_low, ".csv"))
+#write.csv(st_drop_geometry(high_and_low_legs), file = paste0(filename_high_and_low, ".csv"))
+
+#mapshot(m1, file = paste0(filename_high, ".jpg"))
+#mapshot(m2, file = paste0(filename_low, ".jpg"))
+#mapshot(m5, file = paste0(filename_high_and_low, ".jpg"))
+#mapshot(m6, file = paste0(local_gtfs_name, "_all_legs_by_kmph.jpg"))
+
+
+
+```
+
+```{r summarize reults into table}
+
+lines_with_attributes_summarized <- lines_with_attributes %>% st_drop_geometry() %>% group_by(from_stop_name, to_stop_name, route_id, route_long_name) %>% summarise(max(kmph), max(distance_in_miles), n_distinct(trip_id)) %>% rename(number_of_trips = 'n_distinct(trip_id)') %>% rename(max_kmph = 'max(kmph)') %>% rename(max_distance_miles = 'max(distance_in_miles)') %>% ungroup() %>% arrange(-max_kmph)
+
+head(lines_with_attributes_summarized)
+
+#write.csv(lines_with_attributes_summarized, file = paste0(lines_with_attributes, "_summarized.csv"))
+
+
+```

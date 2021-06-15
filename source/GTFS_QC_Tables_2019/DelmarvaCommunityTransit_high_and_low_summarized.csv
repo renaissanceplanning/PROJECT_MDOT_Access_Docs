@@ -1,0 +1,54 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+Talbot & Tubman (YMCA),Travers & West End,18,Cambridge North,2013.23,0.35,21
+Target,St. Michaels Village,13,St. Michaels Shuttle,198.2,6.84,4
+Waddells Corner SB,Dockins Market WB,11,Route 11 - Cambridge - Secretary - East New Market - Hurlock - Preston - Easton,148,3.83,1
+Secretary Main St.,Main St. East New Market EB,11,Route 11 - Cambridge - Secretary - East New Market - Hurlock - Preston - Easton,146.48,1.52,1
+Memorial Hospital (Easton),Lover's Lane SB,8,Route 9 - Cambridge - Trappe - Easton,134.19,6.95,1
+Walmart EB,Shore Stop,8,Route 9 - Cambridge - Trappe - Easton,130.4,6.75,1
+Secretary Main St. WB,Walmart,7,Route 8 - Cambridge - Hurlock - Secretary - East New Market - Federalsburg,130.37,6.75,1
+Shore Stop SB,Walmart,8,Route 9 - Cambridge - Trappe - Easton,130.29,6.75,2
+Walmart EB,Secretary Main St.,7,Route 8 - Cambridge - Hurlock - Secretary - East New Market - Federalsburg,130.24,6.74,2
+Grauls Market,Target,13,St. Michaels Shuttle,128.21,6.64,1
+612/Greyhound,Chesapeake College,1,Route 4 - Rock Hall - Chestertown - Centreville - Easton,116.3,12.04,1
+Kramer Center,Rhode's Store NB,1,Route 4 - Rock Hall - Chestertown - Centreville - Easton,114.9,8.33,2
+Federalsburg Town Parking WB,Laurel Grove Apartments,4,Route 6 - Denton - Federalsburg - Preston - Easton,6.88,0.57,1
+St. Michaels Village,Choptank Community,13,St. Michaels Shuttle,6.88,0.27,1
+Kinnamon's Gas Station NB,Greensboro Parking Lot NB,5,Route 7 - Greensboro - Denton - Easton,6.86,0.36,1
+Food Lion - Easton,Target,15,Saturday Denton - Easton Shuttle,6.85,0.35,4
+Magnolia Meadows,The Greens,17,Route D Easton,6.77,0.35,11
+Target,301 Bay St. (Social Services) Easton,13,St. Michaels Shuttle,6.62,0.34,5
+Inn at Perry Cabin,113 Mitchells St.,13,St. Michaels Shuttle,6.57,0.26,1
+Memorial Hospital (Easton),Walmart,3,Route 5 - Denton - Easton,6.55,1.19,1
+Walmart,Memorial Hospital (Easton),3,Route 5 - Denton - Easton,6.55,1.19,1
+Senior Center,Doverbrook,17,Route D Easton,6.5,0.34,1
+301 Bay St. (Social Services) Easton,Post Office EB,13,St. Michaels Shuttle,6.37,0.55,1
+Easton Post Office,Easton Neighborhood Service Center,14,Denton - Easton AM Shuttle,6.32,0.33,1
+Goldsborough & Calvert,Memorial Hospital (Easton),3,Route 5 - Denton - Easton,6.28,0.98,1
+Rose's Store,Dollar General,1,Route 4 - Rock Hall - Chestertown - Centreville - Easton,6.27,0.97,1
+Easton Neighborhood Service Center,Post Office EB,16,Route C Easton,6.2,0.32,21
+Shore Stop,Trappe Post Office,8,Route 9 - Cambridge - Trappe - Easton,6.1,0.47,5
+Post Office EB,East Ave. at Goldsborough,16,Route C Easton,6.09,0.32,21
+Post Office SB,Shore Stop SB,8,Route 9 - Cambridge - Trappe - Easton,6,0.47,4
+Vaughn St. & School St.,Greensboro Parking Lot,5,Route 7 - Greensboro - Denton - Easton,5.9,0.49,1
+Memorial Hospital (Easton),Walmart,8,Route 9 - Cambridge - Trappe - Easton,5.73,1.19,5
+Bob Evans/Panera Bread,612/Greyhound/MVA,14,Denton - Easton AM Shuttle,5.15,0.43,1
+Goldsborough & Calvert,High & Choptank,1,Route 4 - Rock Hall - Chestertown - Centreville - Easton,5.06,0.52,2
+Goldsborough & Calvert,High & Choptank,9,Route 9A - Cambridge - Trappe - Easton,5.06,0.52,1
+High & Choptank,Goldsborough & Calvert,3,Route 5 - Denton - Easton,5.06,0.52,1
+301 Bay St. (Social Services) Easton,Target,13,St. Michaels Shuttle,5.03,0.35,1
+Goldsborough and Calvert EB,High & Choptank WB,13,St. Michaels Shuttle,4.82,0.5,1
+High & Choptank WB,Goldsborough and Calvert EB,9,Route 9A - Cambridge - Trappe - Easton,4.82,0.5,1
+HAPS Building,Town Parking Lot,15,Saturday Denton - Easton Shuttle,4.8,0.5,1
+HAPS Building,Town Parking Lot,3,Route 5 - Denton - Easton,4.8,0.5,1
+Walmart,612/Greyhound,1,Route 4 - Rock Hall - Chestertown - Centreville - Easton,4.59,0.48,5
+High & Choptank,Walmart,1,Route 4 - Rock Hall - Chestertown - Centreville - Easton,4.31,0.45,1
+High & Choptank WB,Walmart,13,St. Michaels Shuttle,4.16,0.43,1
+Federal Manor & East Main,Federalsburg Town Parking WB,4,Route 6 - Denton - Federalsburg - Preston - Easton,4.08,0.3,2
+612/Greyhound/MVA,Airport Industrial Park,14,Denton - Easton AM Shuttle,3.39,0.35,1
+High & Choptank,Goldsborough & Calvert,13,St. Michaels Shuttle,3.37,0.52,1
+Travers & West End,Zip Mart,18,Cambridge North,3.11,0.32,21
+Goldsborough & Calvert,Walmart,13,St. Michaels Shuttle,2.99,0.46,1
+Goldsborough & Calvert,Walmart,3,Route 5 - Denton - Easton,2.24,0.46,1
+Walmart,High & Choptank,11,Route 11 - Cambridge - Secretary - East New Market - Hurlock - Preston - Easton,1.96,0.45,1
+Walmart,High & Choptank WB,9,Route 9A - Cambridge - Trappe - Easton,1.81,0.43,1
+Walmart,High & Choptank,3,Route 5 - Denton - Easton,1.72,0.45,1

@@ -1,0 +1,4 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+Old Branch Avenue,St. Barnabas North,A,East-West LRT,132.34,3.17,5
+St. Barnabas North,Old Branch Avenue,A,East-West LRT,130.44,3.17,5
+Oxon Hill Park & Ride,National Harbor North (SB),A,East-West LRT,117.04,0.85,5

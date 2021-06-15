@@ -1,0 +1,22 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+Main St & Sleeman St,Frederick St & Mechanic St,Gold,Country Club Mall / Frostburg,281.3,8.16,1
+Walmart Grocery Entrance,"Active Network, Inc",Silver,Morning Service,168.31,5.81,1
+Red Hill Plaza (Cumberland Treatment Center),LaVale Sheetz,Green 1,LaVale / Cresaptown / Bedford Rd,164.35,0.85,1
+Golden Living Center,Urology Associates,Red 1,Willowbrook Rd / South Cumberland,162.16,0.67,8
+Midland MD 36 & Big Lane Ave,Clarysville Motel,Purple,Westernport / LaVale / Bedford Rd,153.77,4.96,2
+Opposite Lions Ball Field,Pyzano's,Yellow,Evening Service,145.41,2.51,1
+Greene St & Lee St,Gold Dingle,Yellow,Evening Service,139.16,0.72,1
+MVA,Tradewinds,Green 1,LaVale / Cresaptown / Bedford Rd,132.12,0.84,5
+Red Hill Plaza (Cumberland Treatment Center),Valley Plaza,Gold,Country Club Mall / Frostburg,129.29,4.02,1
+Willowbrook Rd & Pine Ave,Brook Building,Yellow,Evening Service,126.09,1.04,1
+Walmart Grocery Entrance,Lowe's & Burton's Plaza,FSU 3,FSU Saturday Shuttle,125.18,0.86,7
+MVA,Tradewinds,Purple,Westernport / LaVale / Bedford Rd,122.21,0.84,1
+MVA,Tradewinds,Silver,Morning Service,122.21,0.84,1
+"Active Network, Inc",Cordts PE Center Shelter,Yellow,Evening Service,116.53,0.72,1
+Clarysville Motel,Opposite Red Hill Plaza (Cumberland Treatment Center),Gold,Country Club Mall / Frostburg,113.74,1.51,3
+Westernport Bus Stop,Westernport McDonalds,Purple,Westernport / LaVale / Bedford Rd,6.61,0.34,2
+Allegany College of Maryland,Cumberland Meadows Apartments,Blue 1,White Oaks / Willowbrook Rd,6.04,0.31,4
+Weis Market,Frostburg Plaza (ACS),Silver,Morning Service,5.93,0.31,1
+Virginia Ave & Industrial Blvd (Rite Aid),Opposite HRDC,Yellow,Evening Service,5.89,0.27,1
+Mountain View Apartments,Oldtown Rd & Race St,Silver,Morning Service,4.53,0.52,2
+Allegany Nursing Home & Adult Day Care,Rose's,Silver,Morning Service,3.5,1.09,2

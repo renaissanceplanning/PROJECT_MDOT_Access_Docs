@@ -1,0 +1,18 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+Billingsley Rd & Piney Church Rd (Charlotte Hall),Rt 5 S & Zachia Manor Ct,28,Charlotte Hall,177.23,2.45,13
+Salvation Army Super Store,Washington Square,31,Pinefield,170.62,0.88,16
+Mattawoman-Beantown Rd & Idlewood Park Rd,St Charles Pkwy & Northgate Pl,25,Business A,159.02,1.65,13
+Berry Rd & Buttonbush Dr,Berry Rd & Greenwood Dr,24,Berry Road,150.31,0.78,14
+Billingsley Rd & Middletown Rd,Bensville Rd & Bancroft Dr,29,Indian Head,138.57,2.15,15
+Rt 301 S & Crossover Rd,Rt 301 S & Edge Hill Rd,30,Newburg,133.92,2.77,6
+Relax Inn,Rt 301 N & Fairgrounds Rd,30,Newburg,132.72,2.75,7
+Billingsley Rd & Prince Edward Dr,Billingsley Rd & Livingston Rd,29,Indian Head,126.46,1.96,15
+Hamilton Rd & Stoney Cover Dr,Hamilton Rd & Firethorne St,31,Pinefield,125.18,0.32,15
+St Patricks Dr & Highgate Pl,Waldorf Transfer Point,34,St. Charles C,118.71,0.61,13
+Berry Rd & Sharperville Pl,Berry Rd & Bensville Rd,24,Berry Road,117.22,1.82,14
+Billingsley Rd & Livingston Rd,Bryans Rd McDonalds (Indian Head),29,Indian Head,6.91,0.29,15
+Victoria Park Apartments,Charles County Plaza,26,Business B,6.5,0.47,12
+Nanjemoy Community Center,Rt 6 & Liverpool Pt Rd,38,Nanjemoy,6.18,0.38,2
+Rt 6 & Liverpool Pt Rd,Nanjemoy Community Center,38,Nanjemoy,6.18,0.38,2
+LaPlata Transfer Point (Walmart Lot),Heritage Green Pkwy & Lelia Ct,40,301 Connector,5.65,0.29,21
+Waldorf Transfer Point,St Charles Towne Center Mall,33,St. Charles B,2.99,0.34,16

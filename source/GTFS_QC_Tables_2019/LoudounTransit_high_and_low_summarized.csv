@@ -1,0 +1,25 @@
+from_stop_name,to_stop_name,route_id,route_long_name,max_kmph,max_distance_miles,number_of_trips
+George Washington UniversityExploration Hall,Dulles Town Center Macy's and Lord & Taylor upper level outside,70E,7 to 7 on 7 Eastbound,203.41,2.35,1
+Pacific Blvd @ Auto World Circle,Lerner Building @ Dulles Center Blvd,84X,Atlantic Pacific Connector,189.03,1.96,1
+Dulles Town Center Macy's and Lord & Taylor upper level outside,George Washington Blvd @ George Washington University Exploration Hall,70W,7 to 7 on 7 Westbound,127.49,2.31,2
+Broadlands 772 Lot,"Goose Creek Village 20785 Century Corner Dr, Ashburn",SMC,Silver Metro Connection,126.71,2.62,1
+Pacific Blvd @ Prologis Plaza,Herndon/Monroe Park & Ride lot,84X,Atlantic Pacific Connector,124.2,3.86,1
+Army/Navy Drive & Fern Street,Pentagon Transit Station Bus Bay L5,DCC,"DC Commuter- Dulles South, Dulles North, CFC, Ashburn North & Brambleton to The Rosslyn, Pentagon, Crystal City & DC",6.9,0.36,1
+State Dept (21st & Virginia Ave Metro Bus Stop),"8th & E Streets, NW (Metro Bus Stop)",DCC,"DC Commuter- Dulles South, Dulles North, CFC, Ashburn North & Brambleton to The Rosslyn, Pentagon, Crystal City & DC",6.85,0.28,26
+State Dept (21st & Virginia Ave Metro Bus Stop),"8th & E Streets, NW (Metro Bus Stop)",PDCC,"DC Commuter - Purcellville, Harmony & Leesburg to Rosslyn, Pentagon, Crystal City & Washington DC",6.85,0.28,15
+Maple Ave Apartments,16th St Bus Shelter,40,Pucellville Connector,6.82,0.28,1
+"Leesburg Loudoun County Government, 1 Harrison St SE, Leesburg",Leesburg Plaza (NOVA Urgent Care),55,Route 55,6.71,0.42,1
+INOVA Loudoun Hospital (Main Entrance),HHMI Janelia Farm Research Campus,WE_PM,Weihle Express Afternoon Schedule,6.59,0.75,1
+"14th & F Streets, NW (National Press Bldg) PM","I & 15th Sts., NW (The McPherson Bldg)",DCC,"DC Commuter- Dulles South, Dulles North, CFC, Ashburn North & Brambleton to The Rosslyn, Pentagon, Crystal City & DC",6.54,0.27,20
+"14th & F Streets, NW (National Press Bldg) PM","I & 15th Sts., NW (The McPherson Bldg)",PDCC,"DC Commuter - Purcellville, Harmony & Leesburg to Rosslyn, Pentagon, Crystal City & Washington DC",6.54,0.27,11
+County Complex/County Garage,Loudoun Interfaith Relief/Miller Dr,56,Route 56,6.52,0.34,1
+Eads Street & 12th Street PM,Pentagon Transit Center Bus Bay L5 PM,DCC,"DC Commuter- Dulles South, Dulles North, CFC, Ashburn North & Brambleton to The Rosslyn, Pentagon, Crystal City & DC",6.41,0.46,2
+Eads Street & 12th Street PM,Pentagon Transit Center Bus Bay L5 PM,PDCC,"DC Commuter - Purcellville, Harmony & Leesburg to Rosslyn, Pentagon, Crystal City & Washington DC",6.41,0.46,2
+Pacific Blvd @ Asurion,Pacific Blvd @ Prologis Plaza,84X,Atlantic Pacific Connector,5.84,0.38,1
+Exeter/Fieldstone Apartments,Paxton Campus,55,Route 55,5.82,0.36,1
+Tysons Corner Metro Station (On Galleria Dr at Price Waterhouse Coopers) ,8200 Greensboro Dr,SMC,Silver Metro Connection,5.48,0.28,12
+HHMI Janelia Farm Research Campus,INOVA Loudoun Hospital (Main Entrance),WE_AM,Wiehle Express Morning Schedule,5.18,0.75,1
+"3rd & C Streets, NW (Courthouse Complex)","E & New Jersey Ave., NW(Metro Bus Stop)",DCC,"DC Commuter- Dulles South, Dulles North, CFC, Ashburn North & Brambleton to The Rosslyn, Pentagon, Crystal City & DC",4.97,0.26,15
+"3rd & C Streets, NW (Courthouse Complex)","E & New Jersey Ave., NW(Metro Bus Stop)",PDCC,"DC Commuter - Purcellville, Harmony & Leesburg to Rosslyn, Pentagon, Crystal City & Washington DC",4.97,0.26,12
+Wingler House,Ashburn Village Giant front door,62,Ashburn Connector,4.1,0.53,1
+INOVA Loudoun Hospital (Main Entrance),Ashbrook Commons Plaza @ Ashburn Village Blvd,62,Ashburn Connector,0.62,0.86,1
